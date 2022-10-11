@@ -121,7 +121,7 @@ func (e *Eth) SendRawTransaction(
 	return hash, err
 
 }
-func (e *Eth) getNonce() uint64 {
+func (e *Eth) GetReturnedNonce() uint64 {
 	nonce, err := e.GetNonce(e.address, nil)
 	if err != nil {
 		panic(err)
